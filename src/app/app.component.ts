@@ -5,9 +5,10 @@ import { RouterOutlet } from '@angular/router';
   selector: 'app-root',
   standalone: true,
   imports: [RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  template: `
+    <div class="text-center font-bold text-3xl mb-5">Zoneless change detections demo</div>
+    <router-outlet />
+  `,
 })
 export class AppComponent {
-  title = 'zoneless-cd';
 }

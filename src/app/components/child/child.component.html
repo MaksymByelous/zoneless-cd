@@ -1,0 +1,64 @@
+<div
+  class="p-5 min-w-full grid grid-cols-2 grid-rows-2 gap-8 relative border-2 rounded"
+>
+  <div
+    class="rounded-xl bg-slate-100 shadow-lg p-6 flex flex-col justify-center items-center gap-6"
+  >
+    <section class="text-center">
+      <p>Property</p>
+      <p class="font-bold">{{ propertyData }}</p>
+    </section>
+
+    <div class="flex gap-2">
+      <button class="bg-slate-400 rounded p-1" (click)="updateProperty()">
+        Update
+      </button>
+      <button class="bg-slate-400 rounded p-1" (click)="updatePropertyAfterTimeout()">
+        after 2s timeout
+      </button>
+    </div>
+  </div>
+  <div
+    class="rounded-xl bg-slate-100 shadow-lg p-6 flex flex-col justify-center items-center gap-6"
+  >
+    <section class="text-center">
+      <p>Signal</p>
+      <p class="font-bold">{{ signalData() }}</p>
+    </section>
+    <div class="flex gap-2">
+      <button class="bg-slate-400 rounded p-1" (click)="updateSignal()">
+        Update
+      </button>
+      <button class="bg-slate-400 rounded p-1" (click)="updateSignalAfterTimeout()">
+        after 2s timeout
+      </button>
+    </div>
+  </div>
+  <div
+    class="rounded-xl bg-slate-100 shadow-lg p-6 flex flex-col justify-center items-center gap-6"
+  >
+    <section class="text-center">
+      <p>Input</p>
+      <p class="font-bold">{{ inputData() }}</p>
+    </section>
+  </div>
+  <div
+    class="rounded-xl bg-slate-100 shadow-lg p-6 flex flex-col justify-center items-center gap-6"
+  >
+    <section class="text-center">
+      <p>Observable</p>
+      <p class="font-bold">{{ obsData$ | async }}</p>
+    </section>
+    <div class="flex gap-2">
+      <button class="bg-slate-400 rounded p-1" (click)="updateObs()">
+        Update
+      </button>
+      <button class="bg-slate-400 rounded p-1" (click)="updateObsAfterTimeout()">
+        after 2s timeout
+      </button>
+    </div>
+  </div>
+  <app-cd-icon
+    class="absolute top-[50%] left-[50%] -translate-x-[50%] -translate-y-[50%]"
+  />
+</div>
