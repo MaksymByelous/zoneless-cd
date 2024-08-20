@@ -47,6 +47,7 @@
   >
     <section class="text-center">
       <p>Observable</p>
+<!--      even in zoneless this will trigger change detection because async pipe does .markForCheck() automatically-->
       <p class="font-bold">{{ obsData$ | async }}</p>
     </section>
     <div class="flex gap-2">

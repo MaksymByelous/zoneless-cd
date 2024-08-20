@@ -16,11 +16,8 @@ import {AsyncPipe} from "@angular/common";
 export class ChildComponent implements AfterViewChecked {
   propertyData = 'Property Data';
   signalData = signal('Signal Data');
-
   inputData = input<string | null>();
-
   obsData$ = new BehaviorSubject<string>('Observable Data');
-
   cdIcon = viewChild.required(CdIconComponent);
 
   updateProperty() {
