@@ -20,7 +20,7 @@
   <div class="font-bold mt-2 mb-2">Alternative with fix</div>
   <div class="mb-3">Active items: {{ listActiveItems() }}</div>
   <div class="mb-3">
-    <span>Click to to toggle:</span>
+    <span>Click to toggle:</span>
     @for(item of list(); track item.id) {
       <button class="bg-slate-200 rounded p-2 ml-1 mr-1"
               (click)="item.$isActive.set(!item.$isActive())"

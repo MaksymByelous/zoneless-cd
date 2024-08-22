@@ -10,6 +10,7 @@ import {RouterLink, RouterLinkActive, RouterOutlet} from '@angular/router';
     <nav class="flex justify-center space-x-4 mb-5 text-sky-600">
       <a routerLink="/home" routerLinkActive="font-bold">Home</a>
       <a routerLink="/toggle" routerLinkActive="font-bold">Toggle</a>
+      <a routerLink="/untracked" routerLinkActive="font-bold">Untracked</a>
     </nav>
     <router-outlet />
   `,

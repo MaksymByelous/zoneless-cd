@@ -1,0 +1,19 @@
+<div class="p-2 text-center text-2xl">
+  <div class="font-bold mt-2 mb-2">Untrack to exclude from reactive context</div>
+  <div class="mb-3">
+    <span>Click to update:</span>
+    @for(item of signalTrain; let idx = $index; track idx) {
+      <button class="bg-slate-200 rounded p-2 ml-1 mr-1"
+              (click)="updateSignal(idx)">
+        {{ item() }}
+      </button>
+    }
+  </div>
+  <div>
+    because in effect we track only change of signal 2 and 4
+    <br>
+    we see result updates only for those signals
+    <br>
+    <span class="text-sky-600 font-semibold">{{result()}}</span>
+  </div>
+</div>
