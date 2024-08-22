@@ -1,12 +1,16 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import {RouterLink, RouterLinkActive, RouterOutlet} from '@angular/router';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, RouterLink, RouterLinkActive],
   template: `
     <div class="text-center font-bold text-3xl mb-5">Zoneless change detections demo</div>
+    <nav class="flex justify-center space-x-4 mb-5 text-sky-600">
+      <a routerLink="/home" routerLinkActive="font-bold">Home</a>
+      <a routerLink="/toggle" routerLinkActive="font-bold">Toggle</a>
+    </nav>
     <router-outlet />
   `,
 })

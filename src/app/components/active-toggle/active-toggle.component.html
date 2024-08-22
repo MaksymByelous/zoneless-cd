@@ -1,0 +1,36 @@
+<div class="p-2 text-center text-2xl shadow-md">
+  <div class="mb-3">Active items: {{ $activeItems() }}</div>
+  <div class="mb-3">
+    <span>Click to to toggle:</span>
+    @for(item of items; track item.id) {
+      <button class="bg-slate-200 rounded p-2 ml-1 mr-1"
+              (click)="item.$isActive.set(!item.$isActive())"
+              [class.bg-lime-500]="item.$isActive()">
+        {{ item.id }}
+      </button>
+    }
+  </div>
+  <div>
+    <button class="bg-orange-400 rounded p-2"
+      (click)="addItem()">Add Item</button>
+  </div>
+</div>
+
+<div class="p-2 text-center text-2xl">
+  <div class="font-bold mt-2 mb-2">Alternative with fix</div>
+  <div class="mb-3">Active items: {{ listActiveItems() }}</div>
+  <div class="mb-3">
+    <span>Click to to toggle:</span>
+    @for(item of list(); track item.id) {
+      <button class="bg-slate-200 rounded p-2 ml-1 mr-1"
+              (click)="item.$isActive.set(!item.$isActive())"
+              [class.bg-lime-500]="item.$isActive()">
+        {{ item.id }}
+      </button>
+    }
+  </div>
+  <div>
+    <button class="bg-orange-400 rounded p-2"
+            (click)="addListItem()">Add Item</button>
+  </div>
+</div>
