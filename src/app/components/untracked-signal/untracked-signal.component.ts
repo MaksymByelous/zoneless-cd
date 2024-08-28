@@ -1,5 +1,17 @@
 import {Component, effect, signal, untracked} from '@angular/core';
 
+// export function explicitEffect<T>(source: Signal<T>, action: (value: T) => void) {
+//   effect(() => {
+//     const s = source();
+//     untracked(() => {
+//       action(s)
+//     });
+//   });
+// }
+// explicitEffect(this.id, (id) => {
+//   this.store.load(id);
+// });
+
 @Component({
   selector: 'app-untracked-signal',
   standalone: true,
