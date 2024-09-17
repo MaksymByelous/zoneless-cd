@@ -11,6 +11,7 @@ import {RouterLink, RouterLinkActive, RouterOutlet} from '@angular/router';
       <a routerLink="/home" routerLinkActive="font-bold">Home</a>
       <a routerLink="/toggle" routerLinkActive="font-bold">Toggle</a>
       <a routerLink="/untracked" routerLinkActive="font-bold">Untracked</a>
+      <a routerLink="/getter" routerLinkActive="font-bold">Getter</a>
     </nav>
     <router-outlet />
   `,

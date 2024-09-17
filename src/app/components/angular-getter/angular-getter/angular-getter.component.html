@@ -1,0 +1,22 @@
+<div class="p-2 text-center text-2xl">
+  <div class="font-bold mt-2 mb-2">Getter to computed signal</div>
+  <div class="mb-5">
+    <span>Getter list:</span>
+    @for(item of accDataByGetter; let idx = $index; track idx) {
+      <span class="bg-slate-200 rounded p-2 ml-1 mr-1"
+            (click)="updatePropDateSet(item)">
+        {{ item }}
+      </span>
+    }
+  </div>
+  <div class="mb-3">
+    <span>Computed list:</span>
+    @for(item of accDataBySignal(); let idx = $index; track idx) {
+      <span class="bg-slate-200 rounded p-2 ml-1 mr-1"
+        (click)="updateSignalDateSet(item)"
+      >
+        {{ item }}
+      </span>
+    }
+  </div>
+</div>
