@@ -1,4 +1,4 @@
-import {Component, computed, signal} from '@angular/core';
+import { Component, computed, signal } from '@angular/core';
 
 @Component({
   selector: 'app-angular-getter',
@@ -6,27 +6,27 @@ import {Component, computed, signal} from '@angular/core';
   templateUrl: './angular-getter.component.html',
 })
 export class AngularGetterComponent {
-dataSet1: number[] = [1]
-dataSet2: number[] = [2]
+  dataSet1: number[] = [1];
+  dataSet2: number[] = [2];
 
   get accDataByGetter(): number[] {
-    console.log('getter')
-    return [...this.dataSet1, ...this.dataSet2]
+    console.log('getter');
+    return [...this.dataSet1, ...this.dataSet2];
   }
 
   updatePropDateSet(num: number) {
     this.dataSet2.push(num + 1);
   }
 
-dataSet3 = signal<number[]>([3])
-dataSet4 = signal<number[]>([4])
+  dataSet3 = signal<number[]>([3]);
+  dataSet4 = signal<number[]>([4]);
 
   accDataBySignal = computed<number[]>(() => {
-    console.log('signal')
-    return [...this.dataSet3(), ...this.dataSet4()]
-  })
+    console.log('signal');
+    return [...this.dataSet3(), ...this.dataSet4()];
+  });
 
   updateSignalDateSet(num: number) {
-  this.dataSet4.update((prev) => [...prev, num])
+    this.dataSet4.update((prev) => [...prev, num]);
   }
 }
