@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ActiveToggleComponent } from './active-toggle.component';
+import {provideExperimentalZonelessChangeDetection} from "@angular/core";
 
 describe('ActiveToggleComponent', () => {
   let component: ActiveToggleComponent;
@@ -8,7 +9,10 @@ describe('ActiveToggleComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ActiveToggleComponent]
+      imports: [ActiveToggleComponent],
+      providers: [
+        provideExperimentalZonelessChangeDetection(),
+      ],
     })
     .compileComponents();
 

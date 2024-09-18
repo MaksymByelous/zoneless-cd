@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CdIconComponent } from './cd-icon.component';
+import {provideExperimentalZonelessChangeDetection} from "@angular/core";
 
 describe('CdIconComponent', () => {
   let component: CdIconComponent;
@@ -8,7 +9,10 @@ describe('CdIconComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [CdIconComponent]
+      imports: [CdIconComponent],
+      providers: [
+        provideExperimentalZonelessChangeDetection(),
+      ],
     })
     .compileComponents();
 

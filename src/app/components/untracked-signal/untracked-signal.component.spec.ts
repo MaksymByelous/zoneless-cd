@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { UntrackedSignalComponent } from './untracked-signal.component';
+import {provideExperimentalZonelessChangeDetection} from "@angular/core";
 
 describe('UntrackedSignalComponent', () => {
   let component: UntrackedSignalComponent;
@@ -8,7 +9,10 @@ describe('UntrackedSignalComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [UntrackedSignalComponent]
+      imports: [UntrackedSignalComponent],
+      providers: [
+        provideExperimentalZonelessChangeDetection(),
+      ],
     })
     .compileComponents();
 

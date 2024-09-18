@@ -3,15 +3,13 @@ import {Component, computed, signal} from '@angular/core';
 @Component({
   selector: 'app-angular-getter',
   standalone: true,
-  imports: [],
   templateUrl: './angular-getter.component.html',
-  styleUrl: './angular-getter.component.scss'
 })
 export class AngularGetterComponent {
 dataSet1: number[] = [1]
 dataSet2: number[] = [2]
 
-  get accDataByGetter() {
+  get accDataByGetter(): number[] {
     console.log('getter')
     return [...this.dataSet1, ...this.dataSet2]
   }
