@@ -14,7 +14,7 @@ export class AngularGetterComponent {
     return [...this.dataSet1, ...this.dataSet2];
   }
 
-  updatePropDateSet(num: number) {
+  updatePropDataSet(num: number) {
     this.dataSet2.push(num + 1);
   }
 
@@ -26,7 +26,7 @@ export class AngularGetterComponent {
     return [...this.dataSet3(), ...this.dataSet4()];
   });
 
-  updateSignalDateSet(num: number) {
+  updateSignalDataSet(num: number) {
     this.dataSet4.update((prev) => [...prev, num]);
   }
 }

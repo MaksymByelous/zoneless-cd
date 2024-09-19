@@ -4,7 +4,7 @@
     <span>Getter list:</span>
     @for(item of accDataByGetter; let idx = $index; track idx) {
       <span class="bg-slate-200 rounded p-2 ml-1 mr-1"
-            (click)="updatePropDateSet(item)">
+            (click)="updatePropDataSet(item)">
         {{ item }}
       </span>
     }
@@ -13,7 +13,7 @@
     <span>Computed list:</span>
     @for(item of accDataBySignal(); let idx = $index; track idx) {
       <span class="bg-slate-200 rounded p-2 ml-1 mr-1"
-        (click)="updateSignalDateSet(item)"
+        (click)="updateSignalDataSet(item)"
       >
         {{ item }}
       </span>
